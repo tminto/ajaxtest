@@ -1,0 +1,49 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='jquery.min.js'>\x3C/script>")</script>
+
+
+--------------------
+
+
+$(document).ready(function (){
+
+	$('#addcontent a').click(function(e){
+		e.preventDefault();
+	});
+
+});
+
+--------------------
+
+$(document).ready(function (){
+
+	$('#addcontent a').click(function(e){
+		e.preventDefault();
+		$('#inserthere').load(e.target.href + ' #thumbnails');
+	});
+
+});
+
+--------------------
+
+$(document).ready(function (){
+
+	$('#addcontent a').click(function(e){
+		e.preventDefault();
+		$('#inserthere').load(e.target.href + ' #thumbnails').hide().delay(100).fadeIn(500);
+	});
+
+});
+
+--------------------
+
+$(document).ready(function (){
+	
+	$('#addcontent a').click(function(e){
+		e.preventDefault();
+		$('#inserthere').load(e.target.href + ' #thumbnails',function () {
+			$('#addcontent a').remove();
+		}).hide().fadeIn(500);
+	});	
+	
+});
